@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <algorithm>
+#include <Windows.h>
 
 using namespace std;
 
@@ -13,11 +14,12 @@ public:
 };
 
 bool comparePlayers(const Player& a, const Player& b) {
-    return a.score > b.score; // сравнение по убыванию очков
+    return a.score > b.score; 
 }
 
 int main() {
-    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     int numPlayers;
     cout << "Сколько игроков вы хотите добавить? ";
     cin >> numPlayers;
